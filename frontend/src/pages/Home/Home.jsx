@@ -1,16 +1,22 @@
 import React from 'react'
 import './Home.css'
 import Header from '../../components/Header/Header'
+import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
+import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
+import AppDownload from '../../components/AppDownload/AppDownload'
 
 const Home = () => {
+const [category,setCategory] = useState("All");
+
+
   return (
     <div>
-        <Header/>
-        <div className="header-contents">
-            <h2> Order your favourite food here</h2>
-            <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest  ingredients and culinary expertise. Our mission is to satisty your cravings and elevate your dining experience, one delicious meal at a time.</p>
-            <button>View Menu</button>
-        </div>
+      <Header/>
+      <ExploreMenu category={category} setCategory={setCategory}/>
+      <FoodDisplay category={category}/>
+      <AppDownload/>
+
+       
       
     </div>
   )
