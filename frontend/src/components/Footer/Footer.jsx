@@ -33,11 +33,9 @@ const Footer = () => {
             </ul>
 
         </div>
+      </div>
         <hr />
         <p className="footer-copyright">Copyright 2024 @ Tomato.com - All rights Reserved.</p>
-        </div>
-
-      
     </div>
   )
 }

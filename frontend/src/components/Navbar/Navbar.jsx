@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Navbar = () => {
+const Navbar = (setShowLogin) => {
 
     const [menu,setMenu] = useState("home");
 
@@ -19,7 +19,7 @@ const Navbar = () => {
         <a href='#footer' onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>contact us</a>
     </ul>
     <div className="navbar-right">
-        <img src={assets.basket_icon} alt="" />
+        <img src={assets.search_icon} alt="" />
         <div className="navbar-search-icon">
             <img src={assets.basket_icon} alt="" />
             <div className="dot">
@@ -27,7 +27,7 @@ const Navbar = () => {
             </div>
             
         </div>
-        <button>sign in</button>
+        <button onClick={()=>setShowLogin(true)}>sign in</button>
     </div>
     </div>
   )
